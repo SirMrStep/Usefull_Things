@@ -9,6 +9,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * This uses HikariCP
+ */
 @SuppressWarnings("all")
 public class SQL {
 

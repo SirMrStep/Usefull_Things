@@ -9,10 +9,10 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Minecraft version: 1.19
+ * This uses Spigot 1.19 libaries
  */
 @SuppressWarnings("all")
-public class DataHandler_1_19 {
+public class ItemHandler_1_19 {
 
     /**
      * @param itemStack The ItemStack to edit
