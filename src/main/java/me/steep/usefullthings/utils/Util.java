@@ -1,4 +1,4 @@
-package me.steep.usefullthings;
+package me.steep.usefullthings.utils;
 
 import org.bukkit.ChatColor;
 

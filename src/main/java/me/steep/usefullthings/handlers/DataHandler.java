@@ -17,6 +17,7 @@ import java.util.List;
 
 /**
  * Uses Maven Dependancies inside this pom.xml: MorePersistentDataTypes, CustomBlockData
+ * Also uses maven-shade-plugin with specified settings in this pom.xml
  */
 @SuppressWarnings("all")
 public class DataHandler {

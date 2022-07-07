@@ -1,6 +1,6 @@
 package me.steep.usefullthings.handlers;
 
-import me.steep.usefullthings.Util;
+import me.steep.usefullthings.utils.Util;
 import org.bukkit.Bukkit;
 
 import java.sql.SQLException;

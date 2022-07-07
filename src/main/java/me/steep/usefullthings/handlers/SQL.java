@@ -2,7 +2,7 @@ package me.steep.usefullthings.handlers;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import me.steep.usefullthings.Util;
+import me.steep.usefullthings.utils.Util;
 import org.bukkit.Bukkit;
 
 import java.sql.Connection;
