@@ -447,6 +447,41 @@ public class DataHandler {
         return b;
     }
 
+    // TODO: do the same as the below 3 methods but for setData
+
+    /**
+     * @param itemStack The ItemStack to check
+     * @param key The key to the Object stored in the specified ItemStack's PersistentDataContainer
+     * @param type The type of Object you are getting (you can use DataType for this)
+     * @return The requested Object or null of not present
+     */
+    @Nullable
+    public static Object getData(ItemStack itemStack, String key, PersistentDataType type) {
+        return itemStack.getItemMeta().getPersistentDataContainer().get(new NamespacedKey(instance, key), type);
+    }
+
+    /**
+     * @param ent The Entity to check
+     * @param key The key to the Object stored in the specified Entity's PersistentDataContainer
+     * @param type The type of Object you are getting (you can use DataType for this)
+     * @return The requested Object or null of not present
+     */
+    @Nullable
+    public static Object getData(Entity ent, String key, PersistentDataType type) {
+        return ent.getPersistentDataContainer().get(new NamespacedKey(instance, key), type);
+    }
+
+    /**
+     * @param b The Block to check
+     * @param key The key to the Object stored in the specified Block's PersistentDataContainer
+     * @param type The type of Object you are getting (you can use DataType for this)
+     * @return The requested Object or null of not present
+     */
+    @Nullable
+    public static Object getData(Block b, String key, PersistentDataType type) {
+        return new CustomBlockData(b, instance).get(new NamespacedKey(instance, key), type);
+    }
+
     /**
      * @param itemStack The ItemStack to check
      * @param key The key to the String stored in the specified ItemStack's PersistentDataContainer
@@ -720,6 +755,22 @@ public class DataHandler {
         return new CustomBlockData(b, instance).get(new NamespacedKey(instance, key), DataType.ITEM_STACK);
     }
 
+    enum GiveMe {
+
+        ITEMSTACK(DataType.ITEM_STACK),
+        STRING(DataType.STRING),
+        BOOLEAN(DataType.BOOLEAN);
+
+        private PersistentDataType type;
+        GiveMe(PersistentDataType type) {
+            this.type = type;
+        }
+
+        public PersistentDataType get() {
+            return this.type;
+        }
+
+    }
 
 
 }

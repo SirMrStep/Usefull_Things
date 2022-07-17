@@ -1,4 +1,4 @@
-package me.steep.usefullthings.PlayerArmorEquipEvent;
+package me.steep.usefullthings.events.PlayerArmorEquipEvent;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

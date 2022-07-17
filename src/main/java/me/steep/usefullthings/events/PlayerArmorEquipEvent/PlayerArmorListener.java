@@ -1,6 +1,6 @@
-package me.steep.usefullthings.PlayerArmorEquipEvent;
+package me.steep.usefullthings.events.PlayerArmorEquipEvent;
 
-import me.steep.usefullthings.objects.ArmorItem;
+import me.steep.usefullthings.utils.ArmorItem;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Tag;

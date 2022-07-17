@@ -1,4 +1,4 @@
-package me.steep.usefullthings.objects;
+package me.steep.usefullthings.utils;
 
 import org.bukkit.inventory.ItemStack;
 
