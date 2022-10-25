@@ -756,22 +756,5 @@ public class DataHandler {
         return new CustomBlockData(b, instance).get(new NamespacedKey(instance, key), DataType.ITEM_STACK);
     }
 
-    enum GiveMe {
-
-        ITEMSTACK(DataType.ITEM_STACK),
-        STRING(DataType.STRING),
-        BOOLEAN(DataType.BOOLEAN);
-
-        private PersistentDataType type;
-        GiveMe(PersistentDataType type) {
-            this.type = type;
-        }
-
-        public PersistentDataType get() {
-            return this.type;
-        }
-
-    }
-
 
 }
