@@ -16,6 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * This DataHandler will work for all versions that have PersistantDataContainer
  * Uses Maven Dependancies inside this pom.xml: MorePersistentDataTypes, CustomBlockData
  * Also uses maven-shade-plugin with specified settings in this pom.xml
  */
