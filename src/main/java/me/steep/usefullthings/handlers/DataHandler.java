@@ -25,8 +25,8 @@ public class DataHandler {
 
     private static Plugin instance;
 
-    public static void register(Plugin inst) {
-        instance = inst;
+    public static void register(Plugin plugin) {
+        instance = plugin;
     }
 
     /**

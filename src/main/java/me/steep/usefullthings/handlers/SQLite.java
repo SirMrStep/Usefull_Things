@@ -11,8 +11,16 @@ import java.sql.SQLException;
 @SuppressWarnings("all")
 public class SQLite {
 
+    private static String name;
+    private static String dataFolder;
+
+    public static void initialize(String pluginName, String dataFolderPath) {
+        name = pluginName;
+        dataFolder = dataFolderPath;
+    }
+
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:sqlite:" + "plugin datafolder path here" + "/database.db");
+        return DriverManager.getConnection("jdbc:sqlite:" + dataFolder + "/database.db");
     }
 
     public static void closeConnection(Connection con) {
@@ -84,11 +92,11 @@ public class SQLite {
     }
 
     private static void failed_To_Close_SQL_Connection() {
-        Bukkit.getConsoleSender().sendMessage(Util.color("&c[" + "plugin name here" + "] Failed to close connection to database."));
+        Bukkit.getConsoleSender().sendMessage(Util.color("&c[" + name + "] Failed to close connection to database."));
     }
 
     private static void failed_To_Close_SQL_Connection(SQLException ex) {
-        Bukkit.getConsoleSender().sendMessage(Util.color("&c[" + "plugin name here" + "] Failed to close connection to database:"));
+        Bukkit.getConsoleSender().sendMessage(Util.color("&c[" + name + "] Failed to close connection to database:"));
         ex.printStackTrace();
     }
 

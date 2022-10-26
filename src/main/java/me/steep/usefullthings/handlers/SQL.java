@@ -15,6 +15,12 @@ import java.sql.SQLException;
 @SuppressWarnings("all")
 public class SQL {
 
+    private static String name;
+
+    public static void initialize(String pluginName) {
+        name = pluginName;
+    }
+
     private static final HikariConfig config = new HikariConfig();
     private static final HikariDataSource ds;
 
@@ -108,7 +114,7 @@ public class SQL {
     }
 
     private static void failed_To_Close_SQL_Connection(SQLException ex) {
-        Bukkit.getConsoleSender().sendMessage(Util.color("&c[" + "plugin name here" + "] Failed to close connection to database:"));
+        Bukkit.getConsoleSender().sendMessage(Util.color("&c[" + name + "] Failed to close connection to database:"));
         ex.printStackTrace();
     }
 
